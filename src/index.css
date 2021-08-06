@@ -1,0 +1,159 @@
+:root {
+	--color-primary: #000000;
+	--color-primary-rgba: rgba(0, 0, 0, 0.7);
+	--text-color-primary: #007dff;
+	--text-color-secundary: #fff;
+	--yellow-color: #ffb400;
+
+	--font: "Open Sans", sans-serif;
+	--max-width: 1400px;
+	--header-height: 4rem;
+}
+
+/* Reset */
+html {
+	box-sizing: border-box;
+	font-family: var(--font);
+	font-size: 16px;
+	scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	overflow-x: hidden;
+	max-width: var(--max-width);
+	color: var(--text-color-primary);
+	background-color: var(--color-primary);
+}
+
+a {
+	color: var(--text-color-primary);
+	transition: all 0.5s ease-out;
+}
+
+a:hover {
+	opacity: 0.85;
+}
+
+h1 {
+	margin: 0;
+	font-size: 2rem;
+}
+
+h2 {
+	margin: 0;
+	font-size: 1.5rem;
+}
+
+h3 {
+	margin: 0;
+	font-size: 1.25rem;
+}
+
+h4 {
+	margin: 0;
+	font-size: 1rem;
+}
+
+h5 {
+	margin: 0;
+	font-size: 0.85rem;
+}
+
+h6 {
+	margin: 0;
+	font-size: 0.7rem;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+p {
+	line-height: 1.6;
+}
+
+/* header section */
+.header {
+	position: sticky;
+	top: 0;
+	padding: 0.5rem;
+	height: calc(var(--header-height) - 0.5rem);
+}
+
+.logo a {
+	color: var(--text-color-primary);
+	font-weight: bold;
+	font-size: 2rem;
+	text-decoration: none;
+}
+
+.header > .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 1px 0 var(--yellow-color);
+}
+
+.menu a {
+	text-decoration: none;
+	font-size: 1.5rem;
+	margin-right: 1em;
+}
+
+/* section inicio */
+.main {
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+.main > img {
+	width: 30%;
+	border-radius: 50%;
+}
+
+.home__info-title {
+	font-size: 4.5rem;
+}
+
+.home__info-subtitle {
+	font-size: 2.5rem;
+	color: var(--text-color-secundary);
+}
+
+.home__info-para {
+	font-size: 1.5rem;
+	color: var(--text-color-secundary);
+}
+
+.btn-downloadcv {
+	text-align: center;
+	text-decoration: none;
+	border-radius: 0.5em;
+	padding: 1rem;
+	display: inline-block;
+	font-weight: bold;
+	color: var(--color-primary);
+	background-color: var(--yellow-color);
+}
+/* utilities */
+
+.container {
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0.4rem;
+}
+
+.full-lg-screen {
+	width: 100%;
+	min-height: 100vh;
+}
