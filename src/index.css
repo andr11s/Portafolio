@@ -3,7 +3,7 @@
 	--color-primary-rgba: rgba(0, 0, 0, 0.7);
 	--text-color-primary: #007dff;
 	--text-color-secundary: #fff;
-	--yellow-color: #ffb400;
+	--yellow-color: rgb(255, 214, 0);
 
 	--font: "Open Sans", sans-serif;
 	--max-width: 1400px;
@@ -84,6 +84,7 @@ p {
 .header {
 	position: sticky;
 	top: 0;
+	z-index: 999;
 	background-color: var(--color-primary);
 	height: calc(var(--header-height) - 0.5rem);
 }
@@ -99,7 +100,7 @@ p {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	box-shadow: 0 1px 0 var(--yellow-color);
+	box-shadow: 0 1px 0.3em var(--yellow-color);
 }
 
 .menu a {
@@ -165,8 +166,10 @@ p {
 	font-size: 2.5rem;
 	font-weight: bold;
 }
+
 .skill__info {
 	display: grid;
+	padding-top: 0.9em;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 1em;
 	justify-items: center;
@@ -184,6 +187,9 @@ p {
 .skill__info-card:hover {
 	opacity: 1;
 }
+.skill__info-card > h3 {
+	color: var(--yellow-color);
+}
 .skill__info-card > img {
 	width: 60%;
 }
@@ -194,6 +200,70 @@ p {
 	text-align: center;
 	width: 80%;
 }
+
+/* section proyectos */
+.projects {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.projects__title > h2 {
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+.projects__info {
+	padding-top: 0.9em;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1em;
+}
+
+.projects__info {
+	text-align: center;
+	width: 80%;
+}
+.projects__info-card {
+	border-radius: 0.9em;
+	padding: 0.5em;
+	border: 1px solid var(--text-color-primary);
+	box-shadow: 0 2px 0.5em var(--yellow-color);
+	z-index: 1;
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+}
+.projects__info-card > img {
+	width: 30%;
+}
+
+.projects__info-card > h3 {
+	font-size: 1.5rem;
+	color: var(--yellow-color);
+}
+
+.projects__info-card {
+	color: var(--text-color-secundary);
+	font-size: 1rem;
+}
+.projects__info-card > a {
+	margin-top: auto;
+}
+.projects__info-card > a,
+i {
+	color: var(--color-primary);
+	background-color: var(--yellow-color);
+	text-align: center;
+	text-decoration: none;
+	border-radius: 0.5em;
+	padding: 0.4em;
+	display: inline-block;
+	font-weight: bold;
+	margin-top: auto;
+}
+
 /* utilities */
 
 .container {
@@ -259,6 +329,10 @@ p {
 
 	.skill__info {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.projects__info {
+		grid-template-columns: repeat(1, 1fr);
 	}
 
 	.divider {
