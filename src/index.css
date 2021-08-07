@@ -256,4 +256,12 @@ p {
 	.menu-btn svg {
 		fill: var(--yellow-color);
 	}
+
+	.skill__info {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.divider {
+		width: 50%;
+	}
 }
