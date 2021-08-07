@@ -84,7 +84,7 @@ p {
 .header {
 	position: sticky;
 	top: 0;
-	padding: 0.5rem;
+	background-color: var(--color-primary);
 	height: calc(var(--header-height) - 0.5rem);
 }
 
@@ -115,13 +115,15 @@ p {
 /* section inicio */
 .main {
 	display: grid;
-	grid-template-columns: 1fr 70%;
-	justify-content: space-evenly;
+	grid-template-columns: 1fr 60%;
 	justify-items: center;
 	align-content: center;
 }
+.main__img {
+	text-align: center;
+}
 .main__img > img {
-	width: 80%;
+	width: 60%;
 	border-radius: 50%;
 }
 
@@ -149,6 +151,49 @@ p {
 	color: var(--color-primary);
 	background-color: var(--yellow-color);
 }
+
+/* section habilidades*/
+.skill {
+	height: 100vh;
+	padding-top: 4em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.skill__title h2 {
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+.skill__info {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1em;
+	justify-items: center;
+}
+.skill__info-card {
+	border-radius: 0.9em;
+	padding: 0.5em;
+	border: 1px solid var(--text-color-primary);
+	box-shadow: 0 2px 0.5em var(--yellow-color);
+	z-index: 1;
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+}
+.skill__info-card:hover {
+	opacity: 1;
+}
+.skill__info-card > img {
+	width: 60%;
+}
+.skill__info-title {
+	text-align: center;
+}
+.skill__info-card {
+	text-align: center;
+	width: 80%;
+}
 /* utilities */
 
 .container {
@@ -162,6 +207,12 @@ p {
 	min-height: 100vh;
 }
 
+.divider {
+	width: 10%;
+	padding: 0.1em;
+	background-color: var(--yellow-color);
+}
+
 .none {
 	display: none;
 }
@@ -170,7 +221,8 @@ p {
 @media screen and (max-width: 375px) {
 	.main {
 		display: grid;
-		grid-template-columns: 70%;
+		grid-template-columns: 90%;
+		justify-content: center;
 	}
 
 	.home__info,
