@@ -105,12 +105,19 @@ p {
 	box-shadow: 0 1px 0.3em var(--yellow-color);
 }
 
-.menu a {
-	text-decoration: none;
-	font-size: 1.5rem;
-	margin-right: 1em;
+.menu.is-active {
+	opacity: 1;
+	pointer-events: auto;
 }
 
+.menu a {
+	padding: 1rem;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	color: var(--first-color);
+}
 .menu-btn {
 	display: none;
 }
@@ -380,8 +387,18 @@ i {
 	}
 
 	.menu {
-		display: none;
+		position: fixed;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		top: var(--header-height);
+		background-color: var(--color-primary);
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.5s ease;
 	}
+
 	.menu-btn {
 		display: block;
 		outline: thin solid var(--yellow-color);
@@ -405,10 +422,6 @@ i {
 		justify-content: center;
 		grid-template-columns: 90%;
 	}
-
-	.divider {
-		width: 50%;
-	}
 }
 
 @media screen and (max-width: 768px) {
@@ -418,8 +431,37 @@ i {
 		justify-content: center;
 	}
 
+	.menu {
+		display: none;
+	}
+	.menu {
+		position: fixed;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		top: var(--header-height);
+		background-color: var(--color-primary);
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.5s ease;
+	}
+
+	.menu-btn {
+		display: block;
+		outline: thin solid var(--yellow-color);
+		border: 0;
+		cursor: pointer;
+		background-color: var(--color-primary);
+	}
+	.menu-btn svg {
+		fill: var(--yellow-color);
+	}
 	.home__info,
-	.main__img,
+	.main__img {
+		text-align: center;
+	}
+
 	.home__info-btn {
 		text-align: center;
 	}
@@ -437,16 +479,6 @@ i {
 		color: var(--text-color-secundary);
 	}
 
-	.menu {
-		display: none;
-	}
-	.menu-btn {
-		display: block;
-		outline: thin solid var(--yellow-color);
-		border: 0;
-		cursor: pointer;
-		background-color: var(--color-primary);
-	}
 	.menu-btn svg {
 		fill: var(--yellow-color);
 	}
@@ -462,9 +494,5 @@ i {
 	.contact__info {
 		justify-content: center;
 		grid-template-columns: 90%;
-	}
-
-	.divider {
-		width: 50%;
 	}
 }
