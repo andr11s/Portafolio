@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
 :root {
 	--color-primary: #000000;
 	--color-primary-rgba: rgba(0, 0, 0, 0.7);
@@ -190,11 +192,11 @@ p {
 	box-shadow: 0 2px 0.5em var(--yellow-color);
 	z-index: 1;
 	filter: alpha(opacity=70);
-	-moz-opacity: 0.8;
-	opacity: 0.8;
+	-moz-opacity: 0.9;
+	opacity: 0.9;
 }
 .skill__info-card:hover {
-	opacity: 1;
+	opacity: 2;
 }
 .skill__info-card > h3 {
 	color: var(--yellow-color);
@@ -240,10 +242,6 @@ p {
 	padding: 0.5em;
 	border: 1px solid var(--text-color-primary);
 	box-shadow: 0 2px 0.5em var(--yellow-color);
-	z-index: 1;
-	filter: alpha(opacity=70);
-	-moz-opacity: 0.8;
-	opacity: 0.8;
 }
 .projects__info-card > img {
 	width: 30%;
@@ -274,6 +272,61 @@ i {
 	margin-top: auto;
 }
 
+/* section footer */
+.contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact__title h2 {
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+.contact__info {
+	display: grid;
+	padding: 0.5em;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr;
+	gap: 1em;
+	text-align: center;
+}
+.contact__info-card {
+	border-radius: 0.9em;
+	padding: 0.5em;
+	border: 1px solid var(--text-color-primary);
+	box-shadow: 0 2px 0.5em var(--yellow-color);
+	margin-bottom: 0.9em;
+}
+
+.contact__info-card img {
+	width: 20%;
+}
+.contact__info-card h3 {
+	font-size: 1.5rem;
+	color: var(--yellow-color);
+}
+.contact__info-card p {
+	font-size: 1.4rem;
+	color: var(--text-color-secundary);
+}
+.contact__info-icons {
+	margin-top: 1.4em;
+	text-align: center;
+}
+.contact__info-icons a > img {
+	max-width: 100%;
+	height: auto;
+}
+
+.contact__footer {
+	width: 100%;
+	height: auto;
+	background-color: var(--yellow-color);
+	color: var(--color-primary);
+	text-align: center;
+}
 /* utilities */
 
 .container {
@@ -306,7 +359,8 @@ i {
 	}
 
 	.home__info,
-	.main__img {
+	.main__img,
+	.home__info-btn {
 		text-align: center;
 	}
 	.home__info-title {
@@ -343,6 +397,11 @@ i {
 
 	.projects__info {
 		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.contact__info {
+		justify-content: center;
+		grid-template-columns: 90%;
 	}
 
 	.divider {
