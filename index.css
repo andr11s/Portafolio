@@ -129,7 +129,7 @@ p {
 	align-content: center;
 }
 .main__img {
-	text-align: center;
+	text-align: end;
 }
 .main__img > img {
 	width: 60%;
@@ -150,7 +150,7 @@ p {
 	color: var(--text-color-secundary);
 }
 .home__info-icons a > img {
-	width: 3em;
+	width: 3.5em;
 }
 
 .home__info-btn {
