@@ -3,8 +3,10 @@
 :root {
 	--color-primary: #ffffff;
 	--color-secundary: #007dff;
+	--color-third: #3f91d6;
 	--text-color-primary: #007dff;
 	--text-color-secundary: #000000;
+	--text-color-third: rgba(255, 255, 255, 0.7);
 
 	--font: "Open Sans", sans-serif;
 	--max-width: 1600px;
@@ -153,7 +155,7 @@ p {
 }
 
 .inicio-title {
-	font-size: 1.2em;
+	font-size: 1em;
 	/* font-size: clamp(40px, 8vw, 80px); */
 }
 
@@ -167,7 +169,7 @@ p {
 	margin: 10px 0px 0px;
 	max-width: 550px;
 	color: var(--text-color-secundary);
-	font-size: 1.1em;
+	font-size: 1em;
 }
 
 .inicio-icons svg {
@@ -193,12 +195,7 @@ p {
 
 /* section about */
 .about {
-	padding: 0px 25px;
-}
-
-.about-title {
-	margin: 10px 0px 40px;
-	font-size: clamp(26px, 5vw, 32px);
+	padding: 60px 25px;
 }
 
 .about__paragraph {
@@ -246,18 +243,86 @@ p {
 .about-img img {
 	border-radius: 0.5rem;
 }
+
+/* section projects */
+
+.projects {
+	padding: 60px 25px;
+}
+
+.projects__info {
+	margin: 50px 0px 0px;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 15px;
+	position: relative;
+	list-style-type: none;
+}
+
+.projects-card {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 2rem 1.75rem;
+	border-radius: 0.5em;
+	cursor: pointer;
+
+	background-color: var(--color-third);
+}
+
+.projects-title {
+	color: var(--color-primary);
+	font-size: 1.6rem;
+}
+
+.projects-description {
+	color: var(--text-color-third);
+	max-width: 550px;
+	font-size: 1rem;
+}
+
+.projects-list {
+	display: flex;
+
+	padding: 0;
+	justify-content: flex-start;
+	color: var(--text-color-third);
+	list-style-type: none;
+	flex-grow: 1;
+	flex-wrap: wrap;
+	margin: 20px 0px 0px;
+}
+
+.projects-list li {
+	margin-right: 0.8em;
+}
+
+.project-link {
+	display: flex;
+	width: 100%;
+	margin-bottom: 8px;
+	justify-content: flex-end;
+}
+.project-link svg {
+	fill: #fff;
+	width: 2em;
+	height: 2em;
+}
 /* media queries */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 	.about {
 		display: block;
 	}
 }
 
-@media (max-width: 411px) and (min-height: 700px) {
+@media screen and (max-width: 411px) and (min-height: 700px) {
 	.container {
 		padding-bottom: 10vh;
 	}
 }
+
+/* utilities */
 
 .container {
 	display: flex;
@@ -265,4 +330,9 @@ p {
 	align-items: flex-start;
 	justify-content: center;
 	min-height: 80vh;
+}
+
+.section-title {
+	margin: 10px 0px 40px;
+	font-size: clamp(26px, 5vw, 32px);
 }
