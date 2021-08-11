@@ -87,7 +87,7 @@ p {
 	position: sticky;
 	top: 0;
 	z-index: 999;
-	padding: 1em;
+	padding: 10px 25px;
 	background-color: var(--color-primary);
 	height: calc(var(--header-height) - 0.5rem);
 	box-shadow: 0 1px 1px var(--color-secundary);
@@ -100,7 +100,7 @@ p {
 	text-decoration: none;
 }
 
-.header > .container {
+.header__container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -148,9 +148,121 @@ p {
 }
 
 /* section inicio */
+.inicio {
+	padding: 0px 25px;
+}
 
+.inicio-title {
+	font-size: 1.2em;
+	/* font-size: clamp(40px, 8vw, 80px); */
+}
+
+.inicio-subtile {
+	margin-top: 0.3rem;
+	font-size: 1.6em;
+	color: var(--text-color-secundary);
+}
+
+.inicio-paragraph {
+	margin: 10px 0px 0px;
+	max-width: 550px;
+	color: var(--text-color-secundary);
+	font-size: 1.1em;
+}
+
+.inicio-icons svg {
+	margin-top: 1.5rem;
+	width: 2.4rem;
+	height: 2.4rem;
+}
+
+.btn {
+	display: inline-block;
+	margin-top: 3.1rem;
+	border-radius: 0.5rem;
+	padding: 1rem 1rem;
+	font-size: 0.9rem;
+	line-height: 1;
+	background-color: var(--color-secundary);
+	color: var(--color-primary);
+	border: thin solid var(--color-secundary);
+	font-weight: bold;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* section about */
+.about {
+	padding: 0px 25px;
+}
+
+.about-title {
+	margin: 10px 0px 40px;
+	font-size: clamp(26px, 5vw, 32px);
+}
+
+.about__paragraph {
+	color: var(--text-color-secundary);
+	font-size: 1rem;
+	margin: 0px 0px 15px;
+}
+
+.about-info {
+	margin: 0px 0px 15px;
+	color: black;
+}
+
+.list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(140px, 200px));
+	gap: 0px 10px;
+	padding: 0px;
+	margin: 20px 0px 0px;
+	overflow: hidden;
+	line-height: 3;
+}
+.list-items {
+	font-size: 1rem;
+	font-weight: bold;
+}
+.list-items img {
+	margin: 0.1rem 0px;
+	justify-content: center;
+	position: relative;
+	width: 2.2rem;
+	height: 2.2rem;
+	top: 20%;
+}
+.list-items li {
+	margin: 1rem 0px 0px;
+	margin-bottom: 10px;
+	padding-left: 20px;
+	font-size: 13px;
+}
+.about-img {
+	margin: 50px auto 0px;
+	width: 80%;
+}
+.about-img img {
+	border-radius: 0.5rem;
+}
 /* media queries */
-@media screen and (min-width: 768px) {
-	body {
+@media (max-width: 768px) {
+	.about {
+		display: block;
 	}
+}
+
+@media (max-width: 411px) and (min-height: 700px) {
+	.container {
+		padding-bottom: 10vh;
+	}
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	min-height: 80vh;
 }
