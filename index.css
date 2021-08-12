@@ -388,7 +388,7 @@ p {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
-	min-height: 100vh;
+	min-height: 85vh;
 }
 
 .section-title {
