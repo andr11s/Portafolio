@@ -376,8 +376,32 @@ p {
 /* media queries */
 
 @media screen and (min-width: 1024px) {
-	#fill-height {
+	main#fill-height {
 		padding: 10px 150px;
+	}
+
+	.inner {
+		display: grid;
+		width: 100%;
+		grid-template-columns: 3fr 2fr;
+	}
+	.about-info .list {
+		grid-template-columns: repeat(2, minmax(240px, 200px));
+	}
+
+	.inner .about-img {
+		width: 70%;
+		height: auto;
+		margin: 0px 30%;
+	}
+
+	.contact-description {
+		justify-content: center;
+	}
+
+	.contact-description h4 {
+		max-width: 100%;
+		margin-right: 1em;
 	}
 
 	.menu-btn {
@@ -402,7 +426,7 @@ p {
 	}
 
 	.section-title {
-		font-size: clamp(26px, 2.5vw, 32px);
+		font-size: clamp(26px, 3.5vw, 32px);
 	}
 
 	.menu-btn {
